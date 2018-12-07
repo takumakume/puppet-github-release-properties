@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/takumakume/puppet-github-release-properties-test/releases/latest
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Dec 2018 11:21:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '56'
+      X-Ratelimit-Reset:
+      - '1544184178'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"056efcd7860e8998cc79916932a70a6d"
+      Last-Modified:
+      - Fri, 07 Dec 2018 09:38:09 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - CA94:86B2:217F4B1:2A50AF6:5C0A57B0
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/takumakume/puppet-github-release-properties-test/releases/14399131","assets_url":"https://api.github.com/repos/takumakume/puppet-github-release-properties-test/releases/14399131/assets","upload_url":"https://uploads.github.com/repos/takumakume/puppet-github-release-properties-test/releases/14399131/assets{?name,label}","html_url":"https://github.com/takumakume/puppet-github-release-properties-test/releases/tag/v2.0.0","id":14399131,"node_id":"MDc6UmVsZWFzZTE0Mzk5MTMx","tag_name":"v2.0.0","target_commitish":"master","name":"release
+        version v2.0.0","draft":false,"author":{"login":"takumakume","id":10905048,"node_id":"MDQ6VXNlcjEwOTA1MDQ4","avatar_url":"https://avatars2.githubusercontent.com/u/10905048?v=4","gravatar_id":"","url":"https://api.github.com/users/takumakume","html_url":"https://github.com/takumakume","followers_url":"https://api.github.com/users/takumakume/followers","following_url":"https://api.github.com/users/takumakume/following{/other_user}","gists_url":"https://api.github.com/users/takumakume/gists{/gist_id}","starred_url":"https://api.github.com/users/takumakume/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/takumakume/subscriptions","organizations_url":"https://api.github.com/users/takumakume/orgs","repos_url":"https://api.github.com/users/takumakume/repos","events_url":"https://api.github.com/users/takumakume/events{/privacy}","received_events_url":"https://api.github.com/users/takumakume/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-12-07T00:32:06Z","published_at":"2018-12-07T00:32:35Z","assets":[{"url":"https://api.github.com/repos/takumakume/puppet-github-release-properties-test/releases/assets/10038610","id":10038610,"node_id":"MDEyOlJlbGVhc2VBc3NldDEwMDM4NjEw","name":"puppet-github-release-properties-test.tar.gz","label":null,"uploader":{"login":"takumakume","id":10905048,"node_id":"MDQ6VXNlcjEwOTA1MDQ4","avatar_url":"https://avatars2.githubusercontent.com/u/10905048?v=4","gravatar_id":"","url":"https://api.github.com/users/takumakume","html_url":"https://github.com/takumakume","followers_url":"https://api.github.com/users/takumakume/followers","following_url":"https://api.github.com/users/takumakume/following{/other_user}","gists_url":"https://api.github.com/users/takumakume/gists{/gist_id}","starred_url":"https://api.github.com/users/takumakume/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/takumakume/subscriptions","organizations_url":"https://api.github.com/users/takumakume/orgs","repos_url":"https://api.github.com/users/takumakume/repos","events_url":"https://api.github.com/users/takumakume/events{/privacy}","received_events_url":"https://api.github.com/users/takumakume/received_events","type":"User","site_admin":false},"content_type":"application/x-gzip","state":"uploaded","size":310,"download_count":0,"created_at":"2018-12-07T00:36:52Z","updated_at":"2018-12-07T00:37:47Z","browser_download_url":"https://github.com/takumakume/puppet-github-release-properties-test/releases/download/v2.0.0/puppet-github-release-properties-test.tar.gz"},{"url":"https://api.github.com/repos/takumakume/puppet-github-release-properties-test/releases/assets/10038614","id":10038614,"node_id":"MDEyOlJlbGVhc2VBc3NldDEwMDM4NjE0","name":"puppet-github-release-properties-test.zip","label":null,"uploader":{"login":"takumakume","id":10905048,"node_id":"MDQ6VXNlcjEwOTA1MDQ4","avatar_url":"https://avatars2.githubusercontent.com/u/10905048?v=4","gravatar_id":"","url":"https://api.github.com/users/takumakume","html_url":"https://github.com/takumakume","followers_url":"https://api.github.com/users/takumakume/followers","following_url":"https://api.github.com/users/takumakume/following{/other_user}","gists_url":"https://api.github.com/users/takumakume/gists{/gist_id}","starred_url":"https://api.github.com/users/takumakume/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/takumakume/subscriptions","organizations_url":"https://api.github.com/users/takumakume/orgs","repos_url":"https://api.github.com/users/takumakume/repos","events_url":"https://api.github.com/users/takumakume/events{/privacy}","received_events_url":"https://api.github.com/users/takumakume/received_events","type":"User","site_admin":false},"content_type":"application/zip","state":"uploaded","size":693,"download_count":0,"created_at":"2018-12-07T00:36:59Z","updated_at":"2018-12-07T00:37:47Z","browser_download_url":"https://github.com/takumakume/puppet-github-release-properties-test/releases/download/v2.0.0/puppet-github-release-properties-test.zip"}],"tarball_url":"https://api.github.com/repos/takumakume/puppet-github-release-properties-test/tarball/v2.0.0","zipball_url":"https://api.github.com/repos/takumakume/puppet-github-release-properties-test/zipball/v2.0.0","body":"comments"}'
+    http_version: 
+  recorded_at: Fri, 07 Dec 2018 11:21:21 GMT
+recorded_with: VCR 4.0.0
