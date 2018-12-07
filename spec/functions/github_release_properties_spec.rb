@@ -2,13 +2,12 @@ require 'spec_helper'
 require 'octokit'
 
 describe 'github_release_properties' do
-  # TODO: mocks
   let(:repo) { 'takumakume/puppet-github-release-properties-test' }
   let(:asset) { 'puppet-github-release-properties-test.tar.gz' }
 
-  it { is_expected.to run.with_params('latest', repo, asset) }
-  it { is_expected.to run.with_params('v1.0.0', repo, asset) }
-  it { is_expected.to run.with_params('notfound', repo, asset).and_raise_error(Octokit::NotFound) }
+  it { VCR.use_cassette('latest_release') { is_expected.to run.with_params('latest', repo, asset) } }
+  it { VCR.use_cassette('release_for_tag') { is_expected.to run.with_params('v1.0.0', repo, asset)} }
+  it { VCR.use_cassette('release_for_tag_notfound') { is_expected.to run.with_params('notfound', repo, asset).and_raise_error(Octokit::NotFound)} }
 
   let(:release) do
     {
@@ -19,5 +18,5 @@ describe 'github_release_properties' do
     }
   end
 
-  it { is_expected.to run.with_params('v1.0.0', repo, asset).and_return(release) }
+  it { VCR.use_cassette('release_for_tag') { is_expected.to run.with_params('v1.0.0', repo, asset).and_return(release)} }
 end

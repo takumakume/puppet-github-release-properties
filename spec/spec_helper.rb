@@ -1,8 +1,5 @@
-RSpec.configure do |c|
-  c.mock_with :rspec
-end
-
 require 'puppetlabs_spec_helper/module_spec_helper'
+require 'vcr'
 
 RSpec.configure do |c|
   c.before :each do
@@ -10,11 +7,7 @@ RSpec.configure do |c|
   end
 end
 
-def ensure_module_defined(module_name)
-  module_name.split('::').reduce(Object) do |last_module, next_module|
-    last_module.const_set(next_module, Module.new) unless last_module.const_defined?(next_module)
-    last_module.const_get(next_module)
-  end
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
 end
-
-# 'spec_overrides' from sync.yml will appear below this line
