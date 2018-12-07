@@ -1,0 +1,24 @@
+---
+sudo: false
+dist: trusty
+language: ruby
+cache: bundler
+before_install:
+  - bundle -v
+  - rm -f Gemfile.lock
+  - gem update --system
+  - gem --version
+  - bundle -v
+script:
+  - 'bundle exec rake spec'
+rvm:
+  - 2.5.3
+matrix:
+  fast_finish: true
+  include:
+    -
+      rvm: 2.5.3
+    -
+      rvm: 2.4.5
+notifications:
+  email: false
