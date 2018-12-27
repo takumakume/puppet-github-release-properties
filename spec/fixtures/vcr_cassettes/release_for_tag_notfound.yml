@@ -7,21 +7,23 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - application/vnd.github.v3+json
       User-Agent:
-      - Octokit Ruby Gem 4.13.0
+      - Ruby
+      Host:
+      - api.github.com
       Content-Type:
       - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 404
       message: Not Found
     headers:
       Date:
-      - Fri, 07 Dec 2018 11:21:22 GMT
+      - Thu, 27 Dec 2018 04:18:05 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +35,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '54'
+      - '59'
       X-Ratelimit-Reset:
-      - '1544184178'
+      - '1545887885'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -56,11 +58,16 @@ http_interactions:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Content-Security-Policy:
       - default-src 'none'
+      Content-Encoding:
+      - gzip
       X-Github-Request-Id:
-      - CA96:86B4:3CED627:4D0C0FE:5C0A57B1
+      - 415D:1B7B:16388AFB:18F6DD7A:5C24527B
     body:
       encoding: ASCII-8BIT
-      string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/repos/releases/#get-a-release-by-tag-name"}'
+      string: !binary |-
+        H4sIAAAAAAAAAy3JMQrDMAxG4asUda2joVsO0LFXKEr84wRsy1hyoJTevRm6
+        PPh4HyowkwSa6al+eeiokW4UdR0F1cV3ra/R8/k392Yzc8SBrA19SrtvY5lW
+        LXzcuaOpnc0Qg/E1wYOEv8PyDi4pVCmg7w+RPNQHdwAAAA==
     http_version: 
-  recorded_at: Fri, 07 Dec 2018 11:21:22 GMT
+  recorded_at: Thu, 27 Dec 2018 04:18:04 GMT
 recorded_with: VCR 4.0.0

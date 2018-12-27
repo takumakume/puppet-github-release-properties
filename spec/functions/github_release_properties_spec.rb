@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'octokit'
 
 describe 'github_release_properties' do
   let(:repo) { 'takumakume/puppet-github-release-properties-test' }
@@ -7,7 +6,7 @@ describe 'github_release_properties' do
 
   it { VCR.use_cassette('latest_release') { is_expected.to run.with_params('latest', repo, asset) } }
   it { VCR.use_cassette('release_for_tag') { is_expected.to run.with_params('v1.0.0', repo, asset)} }
-  it { VCR.use_cassette('release_for_tag_notfound') { is_expected.to run.with_params('notfound', repo, asset).and_raise_error(Octokit::NotFound)} }
+  it { VCR.use_cassette('release_for_tag_notfound') { is_expected.to run.with_params('notfound', repo, asset).and_raise_error(RuntimeError)} }
 
   let(:release) do
     {
