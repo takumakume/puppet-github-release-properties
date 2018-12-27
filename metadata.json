@@ -1,6 +1,6 @@
 {
   "name": "takumakume-github_release_properties",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "takumakume",
   "summary": "fetch github releases properties. support installation of latest.",
   "license": "MIT",
